@@ -6,6 +6,6 @@ export * from './Layout/VStack/VStack';
 export * from './Layout/Float/Float';
 export * from './Layout/Tiles/Tiles';
 export * from './Layout/ZStack/ZStack';
-export * from './Layout/Overlay/Overlay';
 export * from './Base/Box';
+export * from './Base/Overlay';
 export * from './Base/Separator';

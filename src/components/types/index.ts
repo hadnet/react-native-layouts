@@ -88,3 +88,11 @@ export type SeparatorProps = {
   width?: SpaceUnit | 'auto';
   height?: SpaceUnit | 'auto';
 } & Partial<PaddingProps & MarginProps>;
+
+export type OverlayProps = {
+  color?: string;
+  opacity?: number;
+  dark?: boolean;
+  darkColor?: string;
+  children?: React.ReactNode;
+};
