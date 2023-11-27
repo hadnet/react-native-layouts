@@ -1,13 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-
-type OverlayProps = {
-  color?: string;
-  opacity?: number;
-  dark?: boolean;
-  darkColor?: string;
-  children?: React.ReactNode;
-};
+import type { OverlayProps } from '../types';
 
 export const Overlay = ({
   dark,

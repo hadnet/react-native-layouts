@@ -7,6 +7,18 @@
 
 * fix typo in Flex ([f075a24](https://github.com/hadnet/react-native-layouts/commit/f075a241b5d0468634bfc6b139f438ca10ca104c))
 
+
+### Features
+
+* ka ([8f08b71](https://github.com/hadnet/react-native-layouts/commit/8f08b71dc71e713b538dcd4a6d7b974a75ed8f27))
+
+# [0.1.0-beta.2](https://github.com/hadnet/react-native-layouts/compare/v0.1.0-beta.1...v0.1.0-beta.2) (2023-11-27)
+
+
+### Bug Fixes
+
+* fix typo in Flex ([f075a24](https://github.com/hadnet/react-native-layouts/commit/f075a241b5d0468634bfc6b139f438ca10ca104c))
+
 # [0.1.0-beta.1](https://github.com/hadnet/react-native-layouts/compare/v0.1.0-beta.0...v0.1.0-beta.1) (2023-11-27)
 
 # 0.1.0-beta.0 (2023-11-27)
