@@ -1,5 +1,7 @@
 
 
+# [0.1.0-rc.0](https://github.com/hadnet/react-native-layouts/compare/v0.1.0-beta.2...v0.1.0-rc.0) (2023-11-27)
+
 # [0.1.0-beta.2](https://github.com/hadnet/react-native-layouts/compare/v0.1.0-beta.1...v0.1.0-beta.2) (2023-11-27)
 
 
