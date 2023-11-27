@@ -1,6 +1,5 @@
 {
   "name": "@hadnet/react-native-layouts",
-  "private": true,
   "version": "0.1.0-beta.2",
   "description": "A set of useful components to help build layouts in React Native",
   "main": "lib/commonjs/index",
