@@ -7,6 +7,11 @@ pre-commit:
     types:
       glob: "*.{js,ts, jsx, tsx}"
       run: npx tsc --noEmit
+prepare-commit-msg:
+  commands:
+    commitizen:
+      interactive: true
+      run: LEFTHOOKS=0 npx cz --hook || true
 commit-msg:
   parallel: true
   commands:
