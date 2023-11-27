@@ -22,7 +22,7 @@ export const FlexBox = styled.View<FlexBoxProps>`
   ${({ row }) => mapDirection(row)};
   ${zIndex};
   ${dev};
-  ${size},
+  ${size};
   ${spacing};
 `;
 
