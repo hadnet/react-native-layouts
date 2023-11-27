@@ -1,6 +1,6 @@
 {
   "name": "@hadnet/react-native-layouts",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "A set of useful components to help build layouts in React Native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -32,7 +32,7 @@
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "clean": "del-cli lib",
     "prepare": "bob build",
-    "release": "release-it"
+    "release": "dotenv release-it"
   },
   "keywords": [
     "react-native",
@@ -47,6 +47,7 @@
   },
   "homepage": "https://github.com/hadnet/react-native-layouts#readme",
   "publishConfig": {
+    "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
@@ -57,8 +58,10 @@
     "@types/jest": "^28.1.2",
     "@types/react": "~17.0.21",
     "@types/react-native": "0.70.0",
+    "babel-plugin-styled-components": "^2.1.4",
     "commitlint": "^17.0.2",
     "del-cli": "^5.0.0",
+    "dotenv-cli": "^7.3.0",
     "eslint": "^8.4.1",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
@@ -71,7 +74,8 @@
     "typescript": "^5.0.2"
   },
   "resolutions": {
-    "@types/react": "17.0.21"
+    "@types/react": "17.0.21",
+    "styled-components": "^5"
   },
   "peerDependencies": {
     "react": "*",
@@ -109,7 +113,8 @@
     },
     "plugins": {
       "@release-it/conventional-changelog": {
-        "preset": "angular"
+        "preset": "angular",
+        "infile": "CHANGELOG.md"
       }
     }
   },
@@ -156,5 +161,9 @@
         }
       ]
     ]
+  },
+  "dependencies": {
+    "styled-components": "^6.1.1",
+    "stylis": "^4.0.0"
   }
 }
