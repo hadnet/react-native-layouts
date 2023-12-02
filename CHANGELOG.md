@@ -1,5 +1,12 @@
 
 
+# [0.1.0-rc.1](https://github.com/hadnet/react-native-layouts/compare/v0.1.0-rc.0...v0.1.0-rc.1) (2023-12-02)
+
+
+### Bug Fixes
+
+* remove fluid prop in children and add z prop in VStack ([06c5d0a](https://github.com/hadnet/react-native-layouts/commit/06c5d0afdbda36582105b66bcf66497d1b13edd4))
+
 # [0.1.0-rc.0](https://github.com/hadnet/react-native-layouts/compare/v0.1.0-beta.2...v0.1.0-rc.0) (2023-11-27)
 
 # [0.1.0-beta.2](https://github.com/hadnet/react-native-layouts/compare/v0.1.0-beta.1...v0.1.0-beta.2) (2023-11-27)
