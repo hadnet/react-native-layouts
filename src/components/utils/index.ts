@@ -1,5 +1,6 @@
 import { css } from 'styled-components/native';
 import type {
+  Alignment,
   Props,
   SpaceUnit,
   MarginProps,
@@ -74,26 +75,44 @@ export const zIndex = css<{ z?: Zindex }>`
   z-index: ${({ z = 1 }) => (z === 'front' ? 9999 : z === 'back' ? -9999 : z)};
 `;
 
+const getAlignOpts = (prop: NonNullable<Alignment>) => {
+  const opts = {
+    'left-top': ['left', 'top'],
+    'right-top': ['right', 'top'],
+    'center-top': ['center', 'top'],
+    'left-bottom': ['left', 'bottom'],
+    'left-center': ['left', 'middle'],
+    'right-bottom': ['right', 'bottom'],
+    'right-center': ['right', 'middle'],
+    'center-bottom': ['center', 'bottom'],
+    'center-center': ['center', 'middle'],
+  } as const;
+  return opts[prop];
+};
+
 export const mapDirection = (row?: boolean) => {
   return !row
     ? css<FlexPositionsProps>`
-        align-items: ${({ toLeft, center, toRight }) => {
-          if (toLeft) return mapAlignItemsOpts('left');
+        align-items: ${({ alignLeft, center, alignRight, align }) => {
+          if (align) return mapAlignItemsOpts(getAlignOpts(align)[0]);
+          if (alignLeft) return mapAlignItemsOpts('left');
           if (center) return mapAlignItemsOpts('center');
-          if (toRight) return mapAlignItemsOpts('right');
+          if (alignRight) return mapAlignItemsOpts('right');
           return mapAlignItemsOpts();
         }};
         justify-content: ${({
-          toTop,
+          alignTop,
           middle,
-          toBottom,
+          alignBottom,
           evenly,
           around,
           between,
+          align,
         }) => {
-          if (toTop) return mapJustifyContentOpts('top');
+          if (align) return mapAlignItemsOpts(getAlignOpts(align)[1]);
+          if (alignTop) return mapJustifyContentOpts('top');
           if (middle) return mapJustifyContentOpts('middle');
-          if (toBottom) return mapJustifyContentOpts('bottom');
+          if (alignBottom) return mapJustifyContentOpts('bottom');
           if (evenly) return mapJustifyContentOpts('evenly');
           if (around) return mapJustifyContentOpts('around');
           if (between) return mapJustifyContentOpts('between');
@@ -101,23 +120,26 @@ export const mapDirection = (row?: boolean) => {
         }};
       `
     : css<FlexPositionsProps>`
-        align-items: ${({ toTop, middle, toBottom }) => {
-          if (toTop) return mapAlignItemsOpts('top');
+        align-items: ${({ alignTop, middle, alignBottom, align }) => {
+          if (align) return mapAlignItemsOpts(getAlignOpts(align)[1]);
+          if (alignTop) return mapAlignItemsOpts('top');
           if (middle) return mapAlignItemsOpts('middle');
-          if (toBottom) return mapAlignItemsOpts('bottom');
+          if (alignBottom) return mapAlignItemsOpts('bottom');
           return mapAlignItemsOpts();
         }};
         justify-content: ${({
-          toLeft,
+          alignLeft,
           center,
-          toRight,
+          alignRight,
           evenly,
           around,
           between,
+          align,
         }) => {
-          if (toLeft) return mapJustifyContentOpts('left');
+          if (align) return mapAlignItemsOpts(getAlignOpts(align)[0]);
+          if (alignLeft) return mapJustifyContentOpts('left');
           if (center) return mapJustifyContentOpts('center');
-          if (toRight) return mapJustifyContentOpts('right');
+          if (alignRight) return mapJustifyContentOpts('right');
           if (evenly) return mapJustifyContentOpts('evenly');
           if (around) return mapJustifyContentOpts('around');
           if (between) return mapJustifyContentOpts('between');

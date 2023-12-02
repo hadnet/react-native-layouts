@@ -24,7 +24,15 @@ export default function App() {
           <Box width={20} height={20} color="cyan" />
         </ZStack>
       </VStack>
-      <HStack space={8}>
+      <HStack align="center-center" space={8}>
+        <Box width={60} height={100} color="blue" />
+        <Spacer p={4}>
+          <Box width={50} height={80} color="violet" />
+        </Spacer>
+        <Spacer x={4} />
+        <Box width={40} height={60} color="green" />
+      </HStack>
+      <HStack alignBottom space={8}>
         <Box width={60} height={100} color="blue" />
         <Spacer p={4}>
           <Box width={50} height={80} color="violet" />

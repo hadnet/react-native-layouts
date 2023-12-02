@@ -42,14 +42,21 @@ export type Positions =
   | 'evenly'
   | 'stretch';
 
+type AlignX = 'left' | 'right' | 'center';
+
+type AlignY = 'top' | 'bottom' | 'center';
+
+export type Alignment = `${AlignX}-${AlignY}`;
+
 export type FlexPositionsProps = Partial<
   {
-    toTop: boolean;
-    toBottom: boolean;
+    align: Alignment;
+    alignTop: boolean;
+    alignBottom: boolean;
     middle: boolean;
     center: boolean;
-    toLeft: boolean;
-    toRight: boolean;
+    alignLeft: boolean;
+    alignRight: boolean;
     evenly: boolean;
     around: boolean;
     between: boolean;
