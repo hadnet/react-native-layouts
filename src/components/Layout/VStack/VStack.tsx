@@ -35,9 +35,7 @@ export function VStack({
       <FlexBox n={fluid ? 1 : 'none'} {...props}>
         {React.Children.map(children, (child, idx) => (
           <>
-            {React.cloneElement(child as JSX.Element, {
-              // flex: fluid ? 1 : 0,
-            })}
+            {child}
             {idx !== len && (
               <View
                 style={{
