@@ -17,7 +17,7 @@ import {
 export default function App() {
   return (
     <View style={styles.container}>
-      <VStack bleed center divider space={12}>
+      <VStack devMode bleed center space={12}>
         <Box width={50} height={100} color="rgba(255,0,0,0.2)" />
         <Box width={50} height={80} color="rgba(0,255,0,0.3)" />
         <ZStack x="50%" y="50%" origin>
