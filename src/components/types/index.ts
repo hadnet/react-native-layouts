@@ -102,4 +102,5 @@ export type OverlayProps = {
   dark?: boolean;
   darkColor?: string;
   children?: React.ReactNode;
+  center?: boolean;
 };
