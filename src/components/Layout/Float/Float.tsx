@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components/native';
 import { setSpaceUnit, setSpaceUnitToProp, size, zIndex } from '../../utils';
 import type { FloatProps } from './Float.types';
-import type { FlexBoxProps } from '../Flex/Flex.types';
 
 const transform = css<Pick<FloatProps, 'originSize'>>`
   ${({ originSize }) =>
@@ -12,9 +11,7 @@ const transform = css<Pick<FloatProps, 'originSize'>>`
     )};
 `;
 
-export const Float = styled.View<
-  FloatProps & Pick<FlexBoxProps, 'bleed' | 'wfull' | 'hfull'>
->`
+export const Float = styled.View<FloatProps>`
   position: absolute;
   ${({ y }) =>
     typeof y != undefined &&
