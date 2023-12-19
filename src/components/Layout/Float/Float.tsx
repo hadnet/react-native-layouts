@@ -14,22 +14,22 @@ const transform = css<Pick<FloatProps, 'originSize'>>`
 export const Float = styled.View<FloatProps>`
   position: absolute;
   ${({ y }) =>
-    typeof y != undefined &&
+    y != undefined &&
     css`
       top: ${setSpaceUnit(y)};
     `};
   ${({ x }) =>
-    typeof x != undefined &&
+    x != undefined &&
     css`
       left: ${setSpaceUnit(x)};
     `};
   ${({ rx }) =>
-    typeof rx != undefined &&
+    rx != undefined &&
     css`
       right: ${setSpaceUnit(rx)};
     `};
   ${({ by }) =>
-    typeof by != undefined &&
+    by != undefined &&
     css`
       bottom: ${setSpaceUnit(by)};
     `};
