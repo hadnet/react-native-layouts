@@ -29,7 +29,7 @@ export default function App() {
         <Spacer p={4}>
           <Box width={50} height={80} color="violet" />
         </Spacer>
-        <Spacer x={4} />
+        <Spacer spaceX={4} />
         <Box width={40} height={60} color="green" />
       </HStack>
       <HStack alignBottom space={8}>
@@ -37,7 +37,7 @@ export default function App() {
         <Spacer p={4}>
           <Box width={50} height={80} color="violet" />
         </Spacer>
-        <Spacer x={4} />
+        <Spacer spaceX={4} />
         <Box width={40} height={60} color="green" />
       </HStack>
     </View>

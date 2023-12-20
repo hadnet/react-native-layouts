@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Float } from '../Float/Float';
-import type { FloatProps } from '../Float/Float.types';
 import type { ZStackProps } from './ZStack.types';
 import type { LayoutChangeEvent } from 'react-native';
 
@@ -9,7 +8,7 @@ export const ZStack = ({
   reversed,
   origin,
   ...props
-}: ZStackProps & Omit<FloatProps, 'originSize'>) => {
+}: ZStackProps) => {
   const [size, setSize] = useState<[number, number]>();
   const len = React.Children.count(children);
   const onLayout = ({ nativeEvent }: LayoutChangeEvent) =>

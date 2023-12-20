@@ -4,8 +4,8 @@ import type { SpaceUnit, MarginProps, PaddingProps } from '../../types';
 export type SpacerProps = PropsWithChildren<
   Partial<
     {
-      x?: SpaceUnit | 'auto';
-      y?: SpaceUnit | 'auto';
+      spaceX?: SpaceUnit | 'auto';
+      spaceY?: SpaceUnit | 'auto';
     } & MarginProps &
       PaddingProps
   >

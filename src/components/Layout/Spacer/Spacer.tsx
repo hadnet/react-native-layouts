@@ -1,17 +1,17 @@
 import React from 'react';
 import styled from 'styled-components/native';
 import { FlexBox } from '../Flex/Flex';
-import type { SpacerProps } from './Spacer.types';
 import { setSpaceUnit } from '../../utils';
+import type { SpacerProps } from './Spacer.types';
 
 const SpacerBase = styled(FlexBox)<SpacerProps>`
-  width: ${({ x = 'auto' }) => setSpaceUnit(x)};
-  height: ${({ y = 'auto' }) => setSpaceUnit(y)};
+  width: ${({ spaceX = 'auto' }) => setSpaceUnit(spaceX)};
+  height: ${({ spaceY = 'auto' }) => setSpaceUnit(spaceY)};
 `;
 
-export function Spacer({ children, x, y, ...props }: SpacerProps) {
+export function Spacer({ children, spaceX, spaceY, ...props }: SpacerProps) {
   return (
-    <SpacerBase n={'none'} x={x} y={y} {...props}>
+    <SpacerBase n={'none'} spaceX={spaceX} spaceY={spaceY} {...props}>
       {children}
     </SpacerBase>
   );

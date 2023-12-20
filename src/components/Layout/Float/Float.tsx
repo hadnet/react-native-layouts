@@ -13,25 +13,25 @@ const transform = css<Pick<FloatProps, 'originSize'>>`
 
 export const Float = styled.View<FloatProps>`
   position: absolute;
-  ${({ y }) =>
-    y != undefined &&
+  ${({ y, top }) =>
+    (top != undefined || y != undefined) &&
     css`
-      top: ${setSpaceUnit(y)};
+      top: ${setSpaceUnit(top ?? y)};
     `};
-  ${({ x }) =>
-    x != undefined &&
+  ${({ x, left }) =>
+    (left != undefined || x != undefined) &&
     css`
-      left: ${setSpaceUnit(x)};
+      left: ${setSpaceUnit(left ?? x)};
     `};
-  ${({ rx }) =>
-    rx != undefined &&
+  ${({ right }) =>
+    right != undefined &&
     css`
-      right: ${setSpaceUnit(rx)};
+      right: ${setSpaceUnit(right)};
     `};
-  ${({ by }) =>
-    by != undefined &&
+  ${({ bottom }) =>
+    bottom != undefined &&
     css`
-      bottom: ${setSpaceUnit(by)};
+      bottom: ${setSpaceUnit(bottom)};
     `};
   overflow: ${({ bleed }) => !bleed && 'hidden'};
   ${zIndex};
