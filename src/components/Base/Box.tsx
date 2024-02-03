@@ -4,7 +4,7 @@ import type { BoxProps } from '../types';
 
 export const Box = styled.View<BoxProps>`
   flex: ${({ fill }) => (fill ? 1 : 'none')};
-  flex-basis: ${({ width = 'auto' }) => setSpaceUnit(width)};
+  flex-basis: ${({ height = 'auto' }) => setSpaceUnit(height)};
   flex-direction: ${({ row }) => (row ? 'row' : 'column')};
   width: ${({ width = 'auto' }) => setSpaceUnit(width)};
   height: ${({ height = 'auto' }) => setSpaceUnit(height)};
