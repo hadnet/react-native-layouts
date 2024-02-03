@@ -9,7 +9,7 @@ export const ZStack = ({
   origin,
   wfull,
   hfull,
-  full,
+  fill,
   ...props
 }: ZStackProps) => {
   const [size, setSize] = useState<[number, number]>();
@@ -22,8 +22,8 @@ export const ZStack = ({
   if (len === 1)
     return (
       <Float
-        wfull={full ?? wfull}
-        hfull={full ?? hfull}
+        wfull={fill ?? wfull}
+        hfull={fill ?? hfull}
         {...props}
         originSize={size}
         onLayout={onLayout}
