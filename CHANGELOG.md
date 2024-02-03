@@ -1,5 +1,17 @@
 
 
+# [0.1.0-rc.7](https://github.com/hadnet/react-native-layouts/compare/v0.1.0-rc.6...v0.1.0-rc.7) (2024-02-03)
+
+
+### Code Refactoring
+
+* 🧰 rename Tiles to Grid add new props; deprecate space for gap prop in Stack components ([df42a4d](https://github.com/hadnet/react-native-layouts/commit/df42a4d2d2552dc1b38711329e43847fcf55c6a6))
+
+
+### BREAKING CHANGES
+
+* Tiles component is renamed to Grid
+
 # [0.1.0-rc.6](https://github.com/hadnet/react-native-layouts/compare/v0.1.0-rc.5...v0.1.0-rc.6) (2023-12-20)
 
 # 0.1.0-rc.5 (2023-12-19)
