@@ -7,6 +7,7 @@ export type VStackProps = PropsWithChildren<
     width?: SpaceUnit;
     height?: SpaceUnit;
     space?: SpaceUnit;
+    gap?: SpaceUnit;
     fluid?: boolean;
     divider?: boolean;
     dividerColor?: string;

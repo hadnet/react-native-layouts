@@ -10,13 +10,23 @@ import {
   // Split,
   // Float,
   // Overlay,
-  // Tiles,
+  Grid,
   // Separator,
 } from '@hadnet/react-native-layouts';
 
 export default function App() {
   return (
     <View style={styles.container}>
+      <Grid columns={3} gap={8} center>
+        <Box width={50} height={100} color="rgba(255,0,0,0.2)" />
+        <Box width={50} height={80} color="rgba(0,255,0,0.3)" />
+        <Box width={50} height={80} color="rgba(0,255,0,0.3)" />
+        <Box width={50} height={80} color="rgba(0,255,0,0.3)" />
+        <Box width={50} height={80} color="rgba(0,255,0,0.3)" />
+        <Box width={50} height={80} color="rgba(0,255,0,0.3)" />
+        <Box width={50} height={80} color="rgba(0,255,0,0.3)" />
+        <Box width={50} height={80} color="rgba(0,255,0,0.3)" />
+      </Grid>
       <VStack devMode bleed center space={12}>
         <Box width={50} height={100} color="rgba(255,0,0,0.2)" />
         <Box width={50} height={80} color="rgba(0,255,0,0.3)" />

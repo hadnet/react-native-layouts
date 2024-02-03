@@ -8,6 +8,7 @@ export function VStack({
   divider,
   children,
   space = 0,
+  gap = 0,
   dividerColor = '#e1e1e1',
   dividerWidth = '100%',
   DividerComponent,
@@ -40,7 +41,7 @@ export function VStack({
               <View
                 style={{
                   width: dividerWidth,
-                  height: (idx !== len ? space : 0) as number,
+                  height: (idx !== len ? gap || space : 0) as number,
                   justifyContent: 'center',
                   alignItems: 'center',
                 }}

@@ -7,6 +7,7 @@ export type FloatProps = (PositionProps | CoordinateProps) & {
   z?: Zindex;
   reversed?: boolean;
   origin?: boolean;
+  full?: boolean;
 } & Pick<FlexBoxProps, 'bleed' | 'wfull' | 'hfull'>;
 
 export type ZStackProps = React.PropsWithChildren<FloatProps>;

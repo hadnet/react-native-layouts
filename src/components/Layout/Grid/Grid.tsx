@@ -1,17 +1,22 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { getRandomColor } from '../../utils';
-import type { TilesProps } from './Tiles.types';
+import type { GridProps } from './Grid.types';
 
-export const Tiles: React.FC<TilesProps> = ({
-  space,
+export const Grid: React.FC<GridProps> = ({
+  space = 0,
+  gap = 0,
+  rowGap = 0,
+  colGap = 0,
+  empty = true,
   columns,
-  empty,
   fill,
+  flex,
+  fluid,
   justifyContent,
   alignItems,
   children,
-  centered,
+  center,
   devMode,
   style,
 }) => {
@@ -25,7 +30,7 @@ export const Tiles: React.FC<TilesProps> = ({
     borderWidth: 1,
   };
 
-  const position = centered
+  const position = center
     ? ({
         justifyContent: 'center',
         alignItems: 'center',
@@ -35,7 +40,8 @@ export const Tiles: React.FC<TilesProps> = ({
         alignItems,
       };
 
-  const filled = fill && ({ height: `${100 / numberOfRows}%` } as const);
+  const filled =
+    (fill || fluid) && ({ height: `${100 / numberOfRows}%` } as const);
 
   const renderChildren = () => {
     const elements = React.Children.toArray(children);
@@ -43,7 +49,14 @@ export const Tiles: React.FC<TilesProps> = ({
     if (shouldFillLastRow) {
       for (let i = 0; i < columns - lastRowItemCount; i++) {
         elements.push(
-          <View key={`dummy-${i}`} style={{ flex: 1, margin: space / 2 }} />
+          <View
+            key={`dummy-${i}`}
+            style={{
+              flex: 1,
+              marginHorizontal: (rowGap || space || gap) / 2,
+              marginVertical: (colGap || space || gap) / 2,
+            }}
+          />
         );
       }
     }
@@ -52,8 +65,9 @@ export const Tiles: React.FC<TilesProps> = ({
       <View
         key={index}
         style={{
-          flex: 1,
-          margin: space / 2,
+          flex: flex || fluid ? 1 : 0,
+          marginHorizontal: (rowGap || space || gap) / 2,
+          marginVertical: (colGap || space || gap) / 2,
           ...position,
           ...dev,
         }}
@@ -67,9 +81,12 @@ export const Tiles: React.FC<TilesProps> = ({
     <View
       style={[
         styles.container,
-        { margin: -space / 2 },
+        {
+          marginHorizontal: -(rowGap || space || gap) / 2,
+          marginVertical: -(colGap || space || gap) / 2,
+        },
         style,
-        fill && { flex: 1 },
+        (fill || fluid) && { flex: 1 },
       ]}
     >
       {new Array(numberOfRows).fill(null).map((_, rowIndex) => (
@@ -80,7 +97,7 @@ export const Tiles: React.FC<TilesProps> = ({
     </View>
   );
 };
-Tiles.displayName = 'Tiles';
+Grid.displayName = 'Grid';
 
 const styles = StyleSheet.create({
   container: {

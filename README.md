@@ -5,7 +5,7 @@ A set of useful components to help build layouts in React Native
 ## Installation
 
 ```sh
-npm install @hadnet/react-native-layouts@rc
+yarn add @hadnet/react-native-layouts@rc
 ```
 
 ## Usage
