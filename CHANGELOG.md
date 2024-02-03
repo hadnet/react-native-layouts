@@ -1,5 +1,7 @@
 
 
+# [0.1.0-rc.8](https://github.com/hadnet/react-native-layouts/compare/v0.1.0-rc.7...v0.1.0-rc.8) (2024-02-03)
+
 # [0.1.0-rc.7](https://github.com/hadnet/react-native-layouts/compare/v0.1.0-rc.6...v0.1.0-rc.7) (2024-02-03)
 
 
