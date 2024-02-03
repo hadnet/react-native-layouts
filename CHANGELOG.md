@@ -1,5 +1,12 @@
 
 
+# [0.1.0-rc.9](https://github.com/hadnet/react-native-layouts/compare/v0.1.0-rc.8...v0.1.0-rc.9) (2024-02-03)
+
+
+### Bug Fixes
+
+* swap width for height ([56bdcf3](https://github.com/hadnet/react-native-layouts/commit/56bdcf3d93b85a3ce6aa446ce0a2d6a22dc6fd4d))
+
 # [0.1.0-rc.8](https://github.com/hadnet/react-native-layouts/compare/v0.1.0-rc.7...v0.1.0-rc.8) (2024-02-03)
 
 # [0.1.0-rc.7](https://github.com/hadnet/react-native-layouts/compare/v0.1.0-rc.6...v0.1.0-rc.7) (2024-02-03)
