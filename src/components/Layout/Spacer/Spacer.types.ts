@@ -6,6 +6,7 @@ export type SpacerProps = PropsWithChildren<
     {
       spaceX?: SpaceUnit | 'auto';
       spaceY?: SpaceUnit | 'auto';
+      gap?: number;
     } & MarginProps &
       PaddingProps
   >

@@ -5,6 +5,7 @@ import { setSpaceUnit } from '../../utils';
 import type { SpacerProps } from './Spacer.types';
 
 const SpacerBase = styled(FlexBox)<SpacerProps>`
+  gap: ${({ gap = 0 }) => gap}px;
   width: ${({ spaceX = 'auto' }) => setSpaceUnit(spaceX)};
   height: ${({ spaceY = 'auto' }) => setSpaceUnit(spaceY)};
 `;
