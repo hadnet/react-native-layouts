@@ -7,6 +7,7 @@ export type HStackProps = PropsWithChildren<
     width?: SpaceUnit;
     height?: SpaceUnit;
     space?: SpaceUnit;
+    gap?: number;
     fluid?: boolean;
     fill?: boolean;
   } & FlexProps
