@@ -1,5 +1,12 @@
 
 
+# [0.1.0-rc.12](https://github.com/hadnet/react-native-layouts/compare/v0.1.0-rc.11...v0.1.0-rc.12) (2024-02-04)
+
+
+### Bug Fixes
+
+* add gap prop type ([927e776](https://github.com/hadnet/react-native-layouts/commit/927e7760c8f33275b7c48f44966b065442ba4a8f))
+
 # [0.1.0-rc.11](https://github.com/hadnet/react-native-layouts/compare/v0.1.0-rc.10...v0.1.0-rc.11) (2024-02-04)
 
 
