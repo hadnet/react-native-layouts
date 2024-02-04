@@ -77,6 +77,7 @@ export type Props = {
   MarginProps;
 
 export type BoxProps = {
+  gap?: number;
   fill?: boolean;
   row?: boolean;
   color?: string;

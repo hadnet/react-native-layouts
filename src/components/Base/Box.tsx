@@ -3,6 +3,7 @@ import { spacing, mapDirection, setSpaceUnit } from '../utils';
 import type { BoxProps } from '../types';
 
 export const Box = styled.View<BoxProps>`
+  gap: ${({ gap = 0 }) => gap}px;
   flex: ${({ fill }) => (fill ? 1 : 'none')};
   flex-basis: ${({ height = 'auto' }) => setSpaceUnit(height)};
   flex-direction: ${({ row }) => (row ? 'row' : 'column')};
