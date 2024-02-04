@@ -1,5 +1,12 @@
 
 
+# [0.1.0-rc.10](https://github.com/hadnet/react-native-layouts/compare/v0.1.0-rc.9...v0.1.0-rc.10) (2024-02-04)
+
+
+### Features
+
+* add gap prop to Box ([a86117c](https://github.com/hadnet/react-native-layouts/commit/a86117c591cac95b95350bfd44a27472f33423ba))
+
 # [0.1.0-rc.9](https://github.com/hadnet/react-native-layouts/compare/v0.1.0-rc.8...v0.1.0-rc.9) (2024-02-03)
 
 
