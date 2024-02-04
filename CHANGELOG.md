@@ -1,5 +1,12 @@
 
 
+# [0.1.0-rc.11](https://github.com/hadnet/react-native-layouts/compare/v0.1.0-rc.10...v0.1.0-rc.11) (2024-02-04)
+
+
+### Features
+
+* add gap prop to Spacer ([2fb72aa](https://github.com/hadnet/react-native-layouts/commit/2fb72aaba3707f35875d67c9701f7e72b9233fdd))
+
 # [0.1.0-rc.10](https://github.com/hadnet/react-native-layouts/compare/v0.1.0-rc.9...v0.1.0-rc.10) (2024-02-04)
 
 
