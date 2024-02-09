@@ -14,6 +14,7 @@ const ratios = {
 export function Split({
   children,
   ratio = '1/2',
+  gap,
   row,
   auto,
   ...props
@@ -21,16 +22,19 @@ export function Split({
   if (Array.isArray(children)) children.length = 2;
   else throw new Error('children needs to be more than one');
 
+  const r = Array.isArray(ratio) ? ratio : ratios[ratio];
+
   return (
     <View
       style={{
+        gap,
         flex: row ? 0 : 1,
         flexDirection: row ? 'row' : 'column',
         width: auto ? 'auto' : '100%',
       }}
     >
       {React.Children.map(children, (child, idx) => (
-        <FlexBox n={ratios[ratio][idx]} {...props}>
+        <FlexBox n={r[idx]} {...props}>
           {child}
         </FlexBox>
       ))}
