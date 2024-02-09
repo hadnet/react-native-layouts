@@ -1,5 +1,12 @@
 
 
+# [0.1.0-rc.14](https://github.com/hadnet/react-native-layouts/compare/v0.1.0-rc.13...v0.1.0-rc.14) (2024-02-09)
+
+
+### Bug Fixes
+
+* add array type to Split ratio prop ([0159bc0](https://github.com/hadnet/react-native-layouts/commit/0159bc0af92e7974494d5f8a6a8b845066ce6619))
+
 # [0.1.0-rc.13](https://github.com/hadnet/react-native-layouts/compare/v0.1.0-rc.12...v0.1.0-rc.13) (2024-02-09)
 
 # [0.1.0-rc.12](https://github.com/hadnet/react-native-layouts/compare/v0.1.0-rc.11...v0.1.0-rc.12) (2024-02-04)
