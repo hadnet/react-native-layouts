@@ -30,21 +30,22 @@ const Text = styled.Text`
 `;
 
 export const Separator: React.FC<
-  SeparatorProps & { textStyle?: TextStyle }
+  SeparatorProps & { textStyle?: TextStyle; gap?: number }
 > = ({
   text,
   color,
   horizontal,
   textStyle,
+  gap = 0,
   px = 0,
   py = 0,
   mx,
   my,
   ...props
 }) => {
-  const [textSize, setTextSize] = useState(() => 0);
-  const xth = horizontal ? textSize : 0;
-  const yth = !horizontal ? textSize : 0;
+  const [textSize, setTextSize] = useState(() => ({ w: 0, h: 0 }));
+  const xth = horizontal ? textSize.w : 0;
+  const yth = !horizontal ? textSize.h : 0;
 
   return (
     <Wrapper
@@ -53,17 +54,20 @@ export const Separator: React.FC<
       py={spaceUnitToNum(py, yth)}
       mx={mx}
       my={my}
+      height={textSize.h}
       {...props}
     >
       <Line color={color} horizontal={horizontal} />
       {text && (
         <Text
-          style={textStyle}
+          style={[textStyle, gap ? { paddingHorizontal: gap } : {}]}
           onLayout={({ nativeEvent }: LayoutChangeEvent) =>
-            textSize === 0 &&
-            setTextSize(() =>
-              horizontal ? nativeEvent.layout.width : nativeEvent.layout.height
-            )
+            textSize.w === 0 &&
+            textSize.h === 0 &&
+            setTextSize(() => ({
+              w: nativeEvent.layout.width,
+              h: nativeEvent.layout.height,
+            }))
           }
         >
           {text}
