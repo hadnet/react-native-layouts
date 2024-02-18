@@ -9,7 +9,7 @@ const Line = styled.View<SeparatorProps>`
   width: ${({ horizontal, width }) =>
     setSpaceUnit(horizontal ? width ?? '50%' : 1)};
   height: ${({ horizontal, height }) =>
-    setSpaceUnit(horizontal ? 1 : height ?? '50%')};
+    setSpaceUnit(horizontal ? 0.3 : height ?? '50%')};
   background-color: ${({ color = '#232323' }) => color};
 `;
 
@@ -35,7 +35,7 @@ export const Separator: React.FC<
   text,
   color,
   horizontal,
-  textStyle,
+  textStyle = { fontSize: 14 },
   gap = 0,
   px = 0,
   py = 0,
@@ -46,6 +46,9 @@ export const Separator: React.FC<
   const [textSize, setTextSize] = useState(() => ({ w: 0, h: 0 }));
   const xth = horizontal ? textSize.w : 0;
   const yth = !horizontal ? textSize.h : 0;
+  const paddingValue = horizontal
+    ? { paddingHorizontal: gap }
+    : { paddingVertical: gap };
 
   return (
     <Wrapper
@@ -54,13 +57,13 @@ export const Separator: React.FC<
       py={spaceUnitToNum(py, yth)}
       mx={mx}
       my={my}
-      height={textSize.h}
+      height={horizontal ? textStyle.fontSize ?? 14 : 'auto'}
       {...props}
     >
       <Line color={color} horizontal={horizontal} />
       {text && (
         <Text
-          style={[textStyle, gap ? { paddingHorizontal: gap } : {}]}
+          style={[textStyle, gap ? paddingValue : {}]}
           onLayout={({ nativeEvent }: LayoutChangeEvent) =>
             textSize.w === 0 &&
             textSize.h === 0 &&
