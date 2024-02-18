@@ -1,5 +1,12 @@
 
 
+# [0.1.0-rc.16](https://github.com/hadnet/react-native-layouts/compare/v0.1.0-rc.15...v0.1.0-rc.16) (2024-02-18)
+
+
+### Bug Fixes
+
+* 🐛 vertical gap in vertical separator ([fc77cf6](https://github.com/hadnet/react-native-layouts/commit/fc77cf65e3356713f76beda09ab868d96c0d7496))
+
 # [0.1.0-rc.15](https://github.com/hadnet/react-native-layouts/compare/v0.1.0-rc.14...v0.1.0-rc.15) (2024-02-18)
 
 
