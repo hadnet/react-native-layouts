@@ -1,5 +1,12 @@
 
 
+# [0.1.0-rc.15](https://github.com/hadnet/react-native-layouts/compare/v0.1.0-rc.14...v0.1.0-rc.15) (2024-02-18)
+
+
+### Bug Fixes
+
+* 🐛 fix height measure on horizontal separator ([c2f5601](https://github.com/hadnet/react-native-layouts/commit/c2f56019e67fe65362325f0df75d44cd857b93e6))
+
 # [0.1.0-rc.14](https://github.com/hadnet/react-native-layouts/compare/v0.1.0-rc.13...v0.1.0-rc.14) (2024-02-09)
 
 
