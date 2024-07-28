@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, type ViewStyle, type StyleProp } from 'react-native';
 import { FlexBox } from '../Flex/Flex';
 import type { SplitProps } from './Split.types';
 
@@ -17,12 +17,18 @@ export function Split({
   gap,
   row,
   auto,
+  between,
   ...props
 }: SplitProps): JSX.Element {
   if (Array.isArray(children)) children.length = 2;
   else throw new Error('children needs to be more than one');
 
   const r = Array.isArray(ratio) ? ratio : ratios[ratio];
+
+  const betweenStyle = (idx: number) =>
+    ({
+      alignItems: idx ? 'flex-end' : 'flex-start',
+    } as StyleProp<ViewStyle>);
 
   return (
     <View
@@ -34,7 +40,7 @@ export function Split({
       }}
     >
       {React.Children.map(children, (child, idx) => (
-        <FlexBox n={r[idx]} {...props}>
+        <FlexBox n={r[idx]} {...props} style={between ? betweenStyle(idx) : {}}>
           {child}
         </FlexBox>
       ))}

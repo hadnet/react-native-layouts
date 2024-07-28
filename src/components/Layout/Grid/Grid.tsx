@@ -101,7 +101,7 @@ Grid.displayName = 'Grid';
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
+    // flexDirection: 'row',
     flexWrap: 'wrap',
   },
   row: {
