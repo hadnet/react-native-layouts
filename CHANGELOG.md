@@ -1,5 +1,12 @@
 
 
+# [0.1.0-rc.17](https://github.com/hadnet/react-native-layouts/compare/v0.1.0-rc.16...v0.1.0-rc.17) (2024-07-28)
+
+
+### Bug Fixes
+
+* split between prop; flexDirection row of Grid container ([000e211](https://github.com/hadnet/react-native-layouts/commit/000e211c874d17ad08c817fbf9d6ec3e9a71c57d))
+
 # [0.1.0-rc.16](https://github.com/hadnet/react-native-layouts/compare/v0.1.0-rc.15...v0.1.0-rc.16) (2024-02-18)
 
 
